@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?cod=$1 [L,QSA]
+RewriteRule ^(.*)\.htm$ index.php?cod=$1 [L,QSA]
